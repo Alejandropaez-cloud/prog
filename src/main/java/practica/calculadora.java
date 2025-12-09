@@ -1,6 +1,5 @@
 package practica;
 
-import java.nio.channels.Pipe.SourceChannel;
 import java.util.Scanner;
 
 public class calculadora {
@@ -13,8 +12,10 @@ public class calculadora {
         int operacion = 0;
         System.out.println("Elige la operación deseada: Sumar(1), Restar(2), Multiplicación(3) o División(4)");
         operacion = sc.nextInt();
+
         do {
-                // Creamos el switch.
+
+            // Creamos el switch.
             switch (operacion) {
                 case 1:
                     System.out.println("Has introducido la opción sumar.");
@@ -33,7 +34,7 @@ public class calculadora {
                     num2 = sc.nextInt();
                     System.out.println(MétodosCalculadora.Restar(num1, num2));
                     break;
-                
+
                 case 3: 
                     System.out.println("Has introducido la opción multiplicación.");
                     System.out.println("Introduce el primer dato.");
@@ -42,7 +43,7 @@ public class calculadora {
                     num2 = sc.nextInt();
                     System.out.println(MétodosCalculadora.Multiplicar(num1, num2));
                     break;
-                
+
                 case 4:
                     System.out.println("Has introducido la opción división.");
                     System.out.println("Introduce el primer dato.");
@@ -50,22 +51,17 @@ public class calculadora {
                     System.out.println("Introduce el segundo dato.");
                     num2 = sc.nextInt();
                     System.out.println(MétodosCalculadora.Division(num1, num2));
-
-                
-                } while (operacion == 0);
-
-                /*
-                Operacion = 0 --> SALIR.
-                Operacion = 1 --> SUMAR.
-                Operacion = 2 --> RESTAR.
-                Operacion = 3 --> MULTIPLICACION.
-                Operacion = 4 --> DIVISION.
-                */
-                    
+                    break;
             }
-        }            
-        
+
+        } while (operacion == 0);
+
+        /*
+        Operacion = 0 --> SALIR.
+        Operacion = 1 --> SUMAR.
+        Operacion = 2 --> RESTAR.
+        Operacion = 3 --> MULTIPLICACION.
+        Operacion = 4 --> DIVISION.
+        */
     }
-
-    
-
+}
