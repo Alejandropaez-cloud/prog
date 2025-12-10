@@ -52,9 +52,15 @@ public class calculadora {
                     num2 = sc.nextInt();
                     System.out.println(MétodosCalculadora.Division(num1, num2));
                     break;
+                
+                case 0:
+                    System.out.println("Saliendo...");
+                default:
+                    System.out.println("Operación no válida.    ");
+                
             }
 
-        } while (operacion == 0);
+        } while (operacion != 0);
 
         /*
         Operacion = 0 --> SALIR.
